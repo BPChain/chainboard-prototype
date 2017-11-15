@@ -4,7 +4,7 @@ import axios from 'axios'
 
 class DataRetrieval extends React.Component {
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.timer = 0
     this.state = {
@@ -13,7 +13,7 @@ class DataRetrieval extends React.Component {
     }
   }
 
-  componentWillMount() {
+  componentWillMount () {
     this.timer = setTimeout(() => {
       this.getBlockTime()
       this.getTimeToNextEpoch()
@@ -43,14 +43,14 @@ class DataRetrieval extends React.Component {
       })
   }
 
-  render() {
+  render () {
     return (
       <div className="ui container">
         <br></br>
         <p>Average Block Time is {this.state.blockTime} seconds.</p>
         <p>Time to next Epoch is {this.state.timeToEpoch} seconds.</p>
       </div>
-    );
+    )
   }
 }
 
