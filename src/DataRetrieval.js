@@ -45,7 +45,8 @@ class DataRetrieval extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="ui container">
+        <br></br>
         <p>Average Block Time is {this.state.blockTime} seconds.</p>
         <p>Time to next Epoch is {this.state.timeToEpoch} seconds.</p>
       </div>
