@@ -1,5 +1,5 @@
-import React from 'react';
-import axios from 'axios';
+import React from 'react'
+import axios from 'axios'
 
 
 class DataRetrieval extends React.Component {
@@ -54,4 +54,4 @@ class DataRetrieval extends React.Component {
   }
 }
 
-export default DataRetrieval;
+export default DataRetrieval
