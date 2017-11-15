@@ -9,7 +9,7 @@ class DataRetrieval extends React.Component {
     this.timer = 0
     this.state = {
       blockTime: this.getBlockTime(),
-      timeToEpoch: this.getTimeToNextEpoch()
+      timeToEpoch: this.getTimeToNextEpoch(),
     }
   }
 
