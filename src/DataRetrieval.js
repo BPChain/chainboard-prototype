@@ -8,22 +8,35 @@ class DataRetrieval extends React.Component {
     super(props)
     this.timer = 0
     this.state = {
-      hashRate: this.getHashRate()
+      blockTime: this.getBlockTime(),
+      timeToEpoch: this.getTimeToNextEpoch()
     }
   }
 
   componentWillMount() {
     this.timer = setTimeout(() => {
-      this.getHashRate()
-      this.componentWillMount();
+      this.getBlockTime()
+      this.getTimeToNextEpoch()
+      this.componentWillMount()
     }, 5000)
   }
 
-  getHashRate = () => {
+  getBlockTime = () => {
     axios
       .get('https://api.nanopool.org/v1/eth/network/avgblocktime')
       .then( (response) => {
-        this.setState({hashRate: response.data.data})
+        this.setState({blockTime: response.data.data})
+      })
+      .catch( (error) => {
+        console.log(error)
+      })
+  }
+
+  getTimeToNextEpoch = () => {
+    axios
+      .get('https://api.nanopool.org/v1/eth/network/timetonextepoch')
+      .then( (response) => {
+        this.setState({timeToEpoch: response.data.data})
       })
       .catch( (error) => {
         console.log(error)
@@ -33,7 +46,8 @@ class DataRetrieval extends React.Component {
   render() {
     return (
       <div>
-        <p>Hashrate is {this.state.hashRate}</p>
+        <p>Average Block Time is {this.state.blockTime} seconds.</p>
+        <p>Time to next Epoch is {this.state.timeToEpoch} seconds.</p>
       </div>
     );
   }
