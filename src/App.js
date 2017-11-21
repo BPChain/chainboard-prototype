@@ -1,5 +1,7 @@
 import React from 'react'
 
+import DataRetrieval from './DataRetrieval'
+
 class App extends React.Component {
   render () {
     return (
@@ -11,6 +13,7 @@ class App extends React.Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <DataRetrieval />
       </div>
     )
   }
