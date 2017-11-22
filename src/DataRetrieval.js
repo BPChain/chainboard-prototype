@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import config from './config'
 
 
 class DataRetrieval extends React.Component {
@@ -26,7 +27,7 @@ class DataRetrieval extends React.Component {
 
   getEthereumPublicData = () => {
     axios
-      .get('http://localhost:2020/api/ethereum/publicStat')
+      .get(config.baseUrl + 'ethereum/publicStat')
       .then((response) => {
         const data = response.data
         console.info(data.activeMiners)
