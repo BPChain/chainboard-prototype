@@ -30,7 +30,6 @@ class DataRetrieval extends React.Component {
       .get(config.baseUrl + 'ethereum/publicStat')
       .then((response) => {
         const data = response.data
-        console.info(data.activeMiners)
         this.setState({
           activeMiners: data.activeMiners,
           activeWorkers: data.activeWorkers,
