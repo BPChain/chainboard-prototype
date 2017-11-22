@@ -12,3 +12,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# semantic generated css
+/semantic
+semantic.json

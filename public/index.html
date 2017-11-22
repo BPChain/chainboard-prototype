@@ -10,12 +10,29 @@
 
     <title>ChainBoard</title>
   </head>
-  <body>
+  <body class= 'ui-container'>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
+    
+    <div class='ui padded basic segment'>
+        <h1>Chainboard</h1>
+        <img class='ui medium circular middle aligned left floated image' src='/images/mainlogo.jpg'></img>
+        <span>  
+            <h2>Description:</h2>
+            <p>Beautiful platform</p>
+        </span>
+        </div>
+    
+  <select class="ui dropdown">
+    <option value="">Select Blockchain Type</option>
+    <option value="1">Public</option>
+    <option value="0">Private</option>
+  </select>
+  <button class='ui button'>Show me data</button>
+  
+  <div id="root"></div>
+  <div id="nanopool"></div>
 
-    <div id="root"></div>
-    <div id="nanopool"></div>
   </body>
 </html>
