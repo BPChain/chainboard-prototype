@@ -7,32 +7,115 @@
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  
+<br>
+  <div class='ui-container header'>
+  <h2 class="ui header">
+    <img class="ui image" src="/images/header.png">
+    <div class="content">
+        <h2 class="ui blue header"> Chainboard </h2>
+    </div>
+  </h2>
+</div>
+</head>
 
-    <title>ChainBoard</title>
-  </head>
+<br>
   <body class= 'ui-container'>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     
-    <div class='ui padded basic segment'>
-        <h1>Chainboard</h1>
-        <img class='ui medium circular middle aligned left floated image' src='/images/mainlogo.jpg'></img>
-        <span>  
-            <h2>Description:</h2>
-            <p>Beautiful platform</p>
-        </span>
-        </div>
-    
-  <select class="ui dropdown">
-    <option value="">Select Blockchain Type</option>
-    <option value="1">Public</option>
-    <option value="0">Private</option>
-  </select>
-  <button class='ui button'>Show me data</button>
-  
-  <div id="root"></div>
-  <div id="nanopool"></div>
+    <div class="ui container">
+        <h2 class="ui block black centered header">Welcome to Blockchain benchmarking platform!</h2>
+      </div>
 
+      <div class='ui very padded basic segment'>
+        <div class="two column stackable centered ui grid">
+            <div class="centered column">
+                <div class="ui blue segment">
+           <form class="ui huge form">
+          <div class="inline fields">
+              <label>Type of the network:</label>
+              <div class="field">
+                <div class="ui radio checkbox">
+                  <input type="radio"  checked="" tabindex="0" class="hidden">
+                  <label>Public</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui radio checkbox">
+                  <input type="radio" tabindex="0" class="hidden">
+                  <label>Private</label>
+                </div>
+              </div>
+            </div>
+            <div class="grouped fields">
+                <label>Amount of nodes:</label>
+                <div class="field">
+                  <div class="ui slider checkbox">
+                    <input type="radio" name="throughput" checked="checked">
+                    <label>10 max</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui slider checkbox">
+                    <input type="radio" name="throughput">
+                    <label>100 max</label>
+                  </div>
+                </div>
+                <div class="field">
+                    <div class="ui slider checkbox">
+                      <input type="radio" name="throughput">
+                      <label>1000 max</label>
+                    </div>
+                  </div>
+              </div>
+          <button class="ui button" type="submit">Show the data</button>
+        </form>
+        </div>
+      </div>
+      
+    <div class="centered column">
+      <div class="ui statistics large centered">
+          <div class="blue statistic">
+            <div class="text value">
+              One<br>
+              Public
+            </div>
+            <div class="label">
+              Blockchain
+            </div>
+          </div>
+          <div class="violet statistic">
+            <div class="value">
+              <i class="bitcoin icon"></i> 5
+            </div>
+            <div class="label">
+              nodes
+            </div>
+          </div>
+          <div class="statistic">
+            <div class="value">
+                <i class="user circle icon"></i> 7
+            </div>
+            <div class="label">
+              Team Members
+            </div>
+          </div>
+      </div>
+      </div>
+      </div>
+    </div>
+
+    <div id="root"></div>
+    <div id="nanopool"></div>
+
+    <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+            HPI 2017. All Rights Reserved
+        </div>
+    </div>
   </body>
 </html>
+
+
